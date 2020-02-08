@@ -3,9 +3,12 @@ import ReactDOM from "react-dom";
 import "./index.css";
 import App from "./components/App";
 
+//UI Library
+import 'antd/dist/antd.css';
+
 // REDUX
 import thunk from 'redux-thunk';
-import logger from 'redux-logger';
+// import logger from 'redux-logger';
 import { createStore, applyMiddleware } from 'redux';
 import { Provider } from 'react-redux';
 
@@ -17,7 +20,7 @@ import {BrowserRouter as Router } from 'react-router-dom';
 
 const store = createStore(
     rootReducer,
-    applyMiddleware(thunk, logger)
+    applyMiddleware(thunk)
 );
 
 const rootElement = document.getElementById("root");

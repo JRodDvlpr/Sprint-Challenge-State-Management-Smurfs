@@ -5,6 +5,9 @@ import { connect } from 'react-redux'
 
 //Component
 import { addSmurf } from '../actions'
+ 
+// CSS UI 
+import { Input } from 'antd';
 
 class AddSmurf extends Component {
 
@@ -35,11 +38,11 @@ class AddSmurf extends Component {
     render() {
         return (
             
-            <form onSubmit={this.submitHandler}>
-                <input type="text" name='name' value={this.state.name} onChange={this.inputHandler} placeholder='Smurf Name' />
-                <input type="number" name='age' value={this.state.age} onChange={this.inputHandler} placeholder='Smurf Age' />
-                <input type="text" name='height' value={this.state.height} onChange={this.inputHandler} placeholder='Smurf Height' />
-                <button type='submit'>Add Smurf</button>
+            <form className="form" onSubmit={this.submitHandler}>
+                <Input type="text" name='name' value={this.state.name} onChange={this.inputHandler} placeholder='Smurf Name' />
+                <Input  type="number" name='age' value={this.state.age} onChange={this.inputHandler} placeholder='Smurf Age' />
+                <Input type="text" name='height' value={this.state.height} onChange={this.inputHandler} placeholder='Smurf Height' />
+                <button>Add Smurf</button>
             </form>
            
         )
